@@ -5,3 +5,7 @@
 ## Системные требования
 - nodejs
 - bower
+
+## Установка
+- npm install
+- npm install -g bower
