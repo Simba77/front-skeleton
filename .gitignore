@@ -1,0 +1,12 @@
+.gitignore
+.idea/
+dist/css/*
+!dist/css/.gitkeep
+dist/fonts/*
+!dist/fonts/.gitkeep
+dist/js/*
+!dist/js/.gitkeep
+node_modules/
+package-lock.json
+src/vendor/*
+!src/vendor/.gitkeep
