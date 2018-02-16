@@ -22,7 +22,7 @@ gulp.task('serve', function () {
         server: './dist'
     });
     gulp.watch('./dist/*.html');
-    gulp.watch('./src/sass/*.scss', gulp.series('sass'));
+    gulp.watch('./src/scss/*.scss', gulp.series('sass'));
     gulp.watch('./src/js/**/*.js', gulp.series('js'));
     gulp.watch('./dist/*.html').on('change', reload);
 });
@@ -31,7 +31,7 @@ gulp.task('serve', function () {
 
 // SCSS compiled
 gulp.task('sass', function () {
-    return gulp.src('./src/sass/*.scss')
+    return gulp.src('./src/scss/*.scss')
         .pipe(plumber())
         // Для генераии style.css.map
         .pipe(sourcemaps.init())
