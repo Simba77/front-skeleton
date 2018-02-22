@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  color: #ffffff;
+  height: 3rem;
+  box-shadow: 0 3px 3px rgba(0,0,0,.29);
+  a {
+    color: #ffffff;
+  }
+}
+
+
+.header__logo {
+  display: flex;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.header__logo-icon {
+  color: #00897b!important;
+  background-color: #fff;
+  text-shadow: 1px 1px 0 rgba(0,137,123,.04), 1px 2px 0 rgba(0,137,123,.04), 1px 3px 0 rgba(0,137,123,.04), 2px 4px 0 rgba(0,137,123,.04), 3px 5px 0 rgba(0,137,123,.04), 4px 6px 0 rgba(0,137,123,.04), 5px 7px 0 rgba(0,137,123,.04), 6px 8px 0 rgba(0,137,123,.04), 7px 9px 0 rgba(0,137,123,.04), 8px 10px 0 rgba(0,137,123,.04), 9px 11px 0 rgba(0,137,123,.04), 10px 12px 0 rgba(0,137,123,.04), 11px 13px 0 rgba(0,137,123,.04), 12px 14px 0 rgba(0,137,123,.04), 13px 15px 0 rgba(0,137,123,.04), 14px 16px 0 rgba(0,137,123,.04), 15px 17px 0 rgba(0,137,123,.04), 16px 18px 0 rgba(0,137,123,.04), 17px 19px 0 rgba(0,137,123,.04), 18px 20px 0 rgba(0,137,123,.04), 19px 21px 0 rgba(0,137,123,.04), 20px 22px 0 rgba(0,137,123,.04), 21px 23px 0 rgba(0,137,123,.04);
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  font-weight: 400;
+  justify-content: center;
+}
+
+.header__logo-text {
+  font-size: 1.3rem;
+  font-weight: 300;
+  word-spacing: -4px;
+}
+
+.header__search {
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.header__search-str {
+  padding-right: 2.5rem;
+  &:active, &:focus {
+    box-shadow: 0 0 0 0.2rem rgb(9, 123, 109);
+  }
+}
+
+.header__search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 5;
+  cursor: pointer;
+  color: #dbdbdb;
+  padding: 0.5rem 0.9rem 0.5rem 0.5rem;
+}

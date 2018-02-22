@@ -73,9 +73,7 @@ gulp.task('js', function () {
 // Сборка вендорных css
 gulp.task('cssVendor', function () {
     return gulp.src([
-        './src/vendor/normalize.css/normalize.css',
-        './src/vendor/bootstrap/dist/css/bootstrap.min.css',
-        './src/vendor/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css'
+        './node_modules/font-awesome/css/font-awesome.css'
     ])
         // Объединяем
         .pipe(concat('vendor.min.css'))
@@ -90,8 +88,8 @@ gulp.task('cssVendor', function () {
 // js vendor compiled
 gulp.task('jsVendor', function () {
     return gulp.src([
-        './src/vendor/jquery/dist/jquery.min.js',
-        './src/vendor/bootstrap/dist/js/bootstrap.min.js'
+        './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/bootstrap/dist/js/bootstrap.min.js'
     ])
         // Собственно компиляция
         .pipe(concat('vendor.min.js'))
@@ -105,7 +103,7 @@ gulp.task('jsVendor', function () {
 // Шрифты
 gulp.task('fontsVendor', function () {
     return gulp.src([
-        './src/vendor/font-awesome/web-fonts-with-css/webfonts/**/*.*'
+        './node_modules/font-awesome/fonts/**/*.*'
     ])
     .pipe(gulp.dest('./dist/fonts'));
 });
