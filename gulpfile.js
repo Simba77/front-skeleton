@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     csso = require('gulp-csso'),
     //del = require('del'),
-    //imagemin = require('gulp-imagemin'),
+    imagemin = require('gulp-imagemin'),
     plumber = require('gulp-plumber'),
     rename = require('gulp-rename'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -89,6 +89,7 @@ gulp.task('cssVendor', function () {
 gulp.task('jsVendor', function () {
     return gulp.src([
         './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/popper.js/dist/umd/popper.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js'
     ])
         // Собственно компиляция
@@ -97,6 +98,14 @@ gulp.task('jsVendor', function () {
         .pipe(uglify())
         // Путь компиляции
         .pipe(gulp.dest('./dist/js'));
+});
+
+// Сжатие изображений
+gulp.task('img', function () {
+    return gulp.src('./src/images/*')
+        .pipe(imagemin())
+        // Куда класть
+        .pipe(gulp.dest('./dist/images'));
 });
 
 
@@ -109,7 +118,7 @@ gulp.task('fontsVendor', function () {
 });
 
 
-gulp.task('build', gulp.parallel('sass', 'js', 'cssVendor', 'jsVendor', 'fontsVendor'));
+gulp.task('build', gulp.parallel('sass', 'js', 'cssVendor', 'jsVendor', 'fontsVendor', 'img'));
 
 
 // Стандартная задача для разработки
